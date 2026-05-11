@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | DBIT Alumni</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script><link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+  <header id="site-header"></header>
+  <main>
+    <section class="hero-bg py-24 text-white" style="background-image:url('assets/images/alumni-02.jpg')">
+      <div class="max-w-4xl mx-auto px-4 text-center"><p class="text-[#f7c04d] font-extrabold uppercase tracking-[0.18em]">Registration</p><h1 class="text-4xl md:text-6xl font-black mt-4">Join the DBIT Alumni network</h1></div>
+    </section>
+    <section class="py-16">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div id="success-screen" class="hidden card p-10 text-center">
+          <div class="mx-auto w-20 h-20 rounded-full bg-[#0859a6] text-[#f7c04d] grid place-items-center text-4xl font-black">✓</div>
+          <h2 class="text-3xl font-black text-[#0859a6] mt-6">Registration submitted</h2>
+          <p class="text-slate-600 mt-3">Thank you for joining DBIT Alumni Association. Your profile is ready for review.</p>
+          <a href="index.html" class="inline-block mt-7 px-6 py-3 rounded-full btn-primary font-bold">Back to Home</a>
+        </div>
+        <form id="registration-form" class="card p-6 md:p-9" novalidate>
+          <div class="mb-8">
+            <div class="h-3 bg-slate-200 rounded-full overflow-hidden"><div id="form-progress" class="h-full bg-[#f7c04d] transition-all"></div></div>
+            <div class="grid grid-cols-4 text-xs md:text-sm mt-3 text-slate-500">
+              <span data-step-label>Personal</span><span data-step-label>Academic</span><span data-step-label>Professional</span><span data-step-label>Review</span>
+            </div>
+          </div>
+          <section class="step-panel">
+            <h2 class="text-2xl font-black text-[#0859a6] mb-6">Step 1: Personal Info</h2>
+            <div class="grid md:grid-cols-2 gap-5">
+              <input class="form-input" name="fullName" required placeholder="Full Name">
+              <input class="form-input" name="email" type="email" required placeholder="Email">
+              <input class="form-input" name="phone" required placeholder="Phone">
+              <input class="form-input" name="city" required placeholder="City">
+              <input class="form-input" name="country" required placeholder="Country">
+              <input class="form-input" name="photo" type="file" accept="image/*" aria-label="Upload profile photo">
+            </div>
+            <button type="button" data-next class="mt-8 px-6 py-3 rounded-full btn-primary font-bold">Next</button>
+          </section>
+          <section class="step-panel">
+            <h2 class="text-2xl font-black text-[#0859a6] mb-6">Step 2: Academic Info</h2>
+            <div class="grid md:grid-cols-2 gap-5">
+              <input class="form-input" name="batchYear" required placeholder="Batch Year">
+              <select class="form-input" name="department" required><option value="">Department</option><option>CSE</option><option>CSE-AI&ML</option><option>CSE-AI&DS</option><option>CSE-IoT&CS</option><option>ISE</option><option>ECE</option><option>EEE</option><option>MBA</option><option>PhD</option></select>
+              <input class="form-input" name="degree" required placeholder="Degree">
+            </div>
+            <div class="mt-8 flex gap-3"><button type="button" data-prev class="px-6 py-3 rounded-full border font-bold">Back</button><button type="button" data-next class="px-6 py-3 rounded-full btn-primary font-bold">Next</button></div>
+          </section>
+          <section class="step-panel">
+            <h2 class="text-2xl font-black text-[#0859a6] mb-6">Step 3: Professional Info</h2>
+            <div class="grid md:grid-cols-2 gap-5">
+              <input class="form-input" name="company" required placeholder="Current Company">
+              <input class="form-input" name="designation" required placeholder="Designation">
+              <input class="form-input md:col-span-2" name="linkedin" type="url" placeholder="LinkedIn URL">
+            </div>
+            <div class="mt-8 flex gap-3"><button type="button" data-prev class="px-6 py-3 rounded-full border font-bold">Back</button><button type="button" data-next class="px-6 py-3 rounded-full btn-primary font-bold">Review</button></div>
+          </section>
+          <section class="step-panel">
+            <h2 class="text-2xl font-black text-[#0859a6] mb-6">Step 4: Review</h2>
+            <div id="review-content" class="bg-slate-50 rounded-xl p-5"></div>
+            <div class="mt-8 flex gap-3"><button type="button" data-prev class="px-6 py-3 rounded-full border font-bold">Back</button><button type="submit" class="px-6 py-3 rounded-full btn-primary font-bold">Submit Registration</button></div>
+          </section>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="js/main.js"></script>
+  <script src="js/register.js"></script>
+</body>
+</html>

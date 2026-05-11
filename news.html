@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News & Achievements | DBIT Alumni</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script><link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+  <header id="site-header"></header>
+  <main>
+    <section class="hero-bg py-28 text-white" style="background-image:url('assets/images/alumni-49.jpg')">
+      <div class="max-w-5xl mx-auto px-4 text-center"><p class="text-[#f7c04d] font-extrabold uppercase tracking-[0.18em]">News & Achievements</p><h1 class="text-4xl md:text-6xl font-black mt-4">Alumni success and DBIT campus updates</h1></div>
+    </section>
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-8 items-center">
+        <img class="rounded-2xl shadow-xl h-[390px] w-full object-cover" src="assets/images/alumni-15.jpeg" alt="DBIT placement success">
+        <div><span class="bg-[#f7c04d] text-[#042551] px-3 py-1 rounded-full text-sm font-black">Featured</span><h2 class="text-3xl md:text-4xl font-black text-[#0859a6] mt-5">DBIT records 650+ offers for FY 2025-26</h2><p class="mt-4 text-slate-700 leading-8">With 100% placement assistance, 200+ industry collaborations and a highest package of 42 LPA, DBIT continues to build strong industry pathways for students and young alumni.</p></div>
+      </div>
+    </section>
+    <section class="py-14">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap gap-3 mb-8">
+          <button class="news-filter px-5 py-2 rounded-full bg-[#0859a6] text-white font-bold" data-category="all">All</button>
+          <button class="news-filter px-5 py-2 rounded-full bg-white text-[#0859a6] border font-bold" data-category="Achievements">Achievements</button>
+          <button class="news-filter px-5 py-2 rounded-full bg-white text-[#0859a6] border font-bold" data-category="Campus News">Campus News</button>
+          <button class="news-filter px-5 py-2 rounded-full bg-white text-[#0859a6] border font-bold" data-category="Alumni News">Alumni News</button>
+          <button class="news-filter px-5 py-2 rounded-full bg-white text-[#0859a6] border font-bold" data-category="Awards">Awards</button>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="news-grid">
+          <article class="news-card card overflow-hidden" data-category="Achievements"><img src="assets/images/alumni-16.jpeg" class="h-48 w-full object-cover" alt="Entrepreneurship achievement"><div class="p-6"><p class="text-sm font-bold text-[#f7c04d]">Achievements • 2026</p><h2 class="text-xl font-black text-[#0859a6]">R Darshan Kumar leads Maxlite AAC Blocks</h2><p class="mt-3 text-slate-600">ECE 2014 alumnus represents DBIT's entrepreneurship outcomes.</p><a href="gallery.html" class="inline-block mt-4 font-bold text-[#0859a6]">Read More</a></div></article>
+          <article class="news-card card overflow-hidden" data-category="Awards"><img src="assets/images/alumni-17.jpeg" class="h-48 w-full object-cover" alt="Sneha P J award"><div class="p-6"><p class="text-sm font-bold text-[#f7c04d]">Awards • 2025</p><h2 class="text-xl font-black text-[#0859a6]">Sneha P J recognized as KOAA & Kempegowda Awardee</h2><p class="mt-3 text-slate-600">ECE alumna balances public service and international athletics.</p><a href="gallery.html" class="inline-block mt-4 font-bold text-[#0859a6]">Read More</a></div></article>
+          <article class="news-card card overflow-hidden" data-category="Campus News"><img src="assets/images/alumni-18.jpeg" class="h-48 w-full object-cover" alt="DBIT autonomous status"><div class="p-6"><p class="text-sm font-bold text-[#f7c04d]">Campus News • 2024</p><h2 class="text-xl font-black text-[#0859a6]">Autonomous Status 2024</h2><p class="mt-3 text-slate-600">DBIT continues VTU affiliation while entering an autonomous academic phase.</p><a href="gallery.html" class="inline-block mt-4 font-bold text-[#0859a6]">Read More</a></div></article>
+          <article class="news-card card overflow-hidden" data-category="Alumni News"><img src="assets/images/alumni-19.jpeg" class="h-48 w-full object-cover" alt="Alumni cricket"><div class="p-6"><p class="text-sm font-bold text-[#f7c04d]">Alumni News • 2023</p><h2 class="text-xl font-black text-[#0859a6]">Alumni Cricket Tournament builds community</h2><p class="mt-3 text-slate-600">Sports remains a strong connector for graduates across batches.</p><a href="gallery.html" class="inline-block mt-4 font-bold text-[#0859a6]">Read More</a></div></article>
+          <article class="news-card card overflow-hidden" data-category="Campus News"><img src="assets/images/alumni-20.jpeg" class="h-48 w-full object-cover" alt="NAAC visit"><div class="p-6"><p class="text-sm font-bold text-[#f7c04d]">Campus News • 2024</p><h2 class="text-xl font-black text-[#0859a6]">NAAC Peer Team Visit completed</h2><p class="mt-3 text-slate-600">The visit took place on 7th and 8th November 2024.</p><a href="gallery.html" class="inline-block mt-4 font-bold text-[#0859a6]">Read More</a></div></article>
+          <article class="news-card card overflow-hidden" data-category="Achievements"><img src="assets/images/alumni-21.jpeg" class="h-48 w-full object-cover" alt="IDEA Lab"><div class="p-6"><p class="text-sm font-bold text-[#f7c04d]">Achievements • Innovation</p><h2 class="text-xl font-black text-[#0859a6]">DBIT AICTE IDEA Lab inaugurated</h2><p class="mt-3 text-slate-600">A prototyping and innovation environment for industry-ready ideas.</p><a href="gallery.html" class="inline-block mt-4 font-bold text-[#0859a6]">Read More</a></div></article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="js/main.js"></script>
+  <script>
+    document.querySelectorAll('.news-filter').forEach(btn => btn.addEventListener('click', () => {
+      document.querySelectorAll('.news-filter').forEach(b => { b.classList.remove('bg-[#0859a6]', 'text-white'); b.classList.add('bg-white', 'text-[#0859a6]', 'border'); });
+      btn.classList.add('bg-[#0859a6]', 'text-white'); btn.classList.remove('bg-white', 'text-[#0859a6]', 'border');
+      document.querySelectorAll('.news-card').forEach(card => card.classList.toggle('hidden', btn.dataset.category !== 'all' && card.dataset.category !== btn.dataset.category));
+    }));
+  </script>
+</body>
+</html>

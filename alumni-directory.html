@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alumni Directory | DBIT Alumni</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script><link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+  <header id="site-header"></header>
+  <main>
+    <section class="hero-bg py-28 text-white" style="background-image:url('assets/images/alumni-02.jpg')">
+      <div class="max-w-5xl mx-auto px-4 text-center">
+        <p class="text-[#f7c04d] font-extrabold uppercase tracking-[0.18em]">Directory</p>
+        <h1 class="text-4xl md:text-6xl font-black mt-4">Find DBIT alumni by batch, department and career</h1>
+      </div>
+    </section>
+    <section class="py-14">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="card p-5 mb-8">
+          <label for="directory-search" class="sr-only">Search alumni</label>
+          <input id="directory-search" class="form-input" type="search" placeholder="Search by name, batch year, department, company or location">
+        </div>
+        <div class="grid lg:grid-cols-[280px_1fr] gap-8">
+          <aside class="card p-6 h-fit">
+            <h2 class="text-xl font-black text-[#0859a6] mb-5">Filters</h2>
+            <div class="mb-6">
+              <h3 class="font-extrabold mb-3">Department</h3>
+              <div class="grid gap-2 text-sm">
+                <label><input type="checkbox" data-filter value="CSE"> CSE</label>
+                <label><input type="checkbox" data-filter value="ISE"> ISE</label>
+                <label><input type="checkbox" data-filter value="ECE"> ECE</label>
+                <label><input type="checkbox" data-filter value="EEE"> EEE</label>
+                <label><input type="checkbox" data-filter value="MBA"> MBA</label>
+              </div>
+            </div>
+            <div class="mb-6">
+              <h3 class="font-extrabold mb-3">Year Range</h3>
+              <div class="grid gap-2 text-sm">
+                <label><input type="checkbox" data-filter value="2013"> 2013</label>
+                <label><input type="checkbox" data-filter value="2014"> 2014</label>
+                <label><input type="checkbox" data-filter value="2020"> 2020</label>
+                <label><input type="checkbox" data-filter value="2024"> 2024</label>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-extrabold mb-3">Location</h3>
+              <div class="grid gap-2 text-sm">
+                <label><input type="checkbox" data-filter value="Bengaluru"> Bengaluru</label>
+                <label><input type="checkbox" data-filter value="Karnataka"> Karnataka</label>
+                <label><input type="checkbox" data-filter value="India"> India</label>
+                <label><input type="checkbox" data-filter value="Abroad"> Abroad</label>
+              </div>
+            </div>
+          </aside>
+          <div>
+            <div id="directory-grid" class="grid sm:grid-cols-2 xl:grid-cols-4 gap-6" aria-live="polite"></div>
+            <div id="pagination" class="flex flex-wrap gap-2 mt-8"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="js/main.js"></script>
+  <script src="js/directory.js"></script>
+</body>
+</html>
