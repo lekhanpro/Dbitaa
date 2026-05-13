@@ -305,21 +305,43 @@ body {
   background: var(--dbit-deep);
 }
 
-.hero-image {
+.hero-image,
+.hero-video {
   position: absolute;
   inset: 0;
+}
+
+.hero-image {
   background-image: url("../assets/images/alumni-04.jpeg");
   background-size: cover;
   background-position: center;
   filter: saturate(0.88) contrast(1.02);
 }
 
+.hero-video {
+  overflow: hidden;
+  background: var(--dbit-deep);
+}
+
+.hero-video iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 177.78vh;
+  height: 100vh;
+  min-width: 100vw;
+  min-height: 56.25vw;
+  transform: translate(-50%, -50%);
+  border: 0;
+  pointer-events: none;
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(1, 29, 67, 0.95) 0%, rgba(5, 42, 91, 0.86) 38%, rgba(5, 42, 91, 0.22) 72%),
-    linear-gradient(0deg, rgba(1, 29, 67, 0.38), rgba(1, 29, 67, 0.04));
+    linear-gradient(90deg, rgba(1, 29, 67, 0.96) 0%, rgba(5, 42, 91, 0.88) 42%, rgba(5, 42, 91, 0.3) 76%),
+    linear-gradient(0deg, rgba(1, 29, 67, 0.5), rgba(1, 29, 67, 0.12));
 }
 
 .hero-inner {
@@ -353,11 +375,20 @@ body {
   color: #f5f8ff;
 }
 
-.hero-note {
+.hero-quote {
   max-width: 520px;
   margin-top: 2.1rem;
   padding-top: 1.7rem;
   border-top: 6px solid var(--dbit-yellow);
+  color: #fff;
+  font-size: clamp(1.04rem, 1.5vw, 1.28rem);
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.hero-note {
+  max-width: 520px;
+  margin-top: 1rem;
   color: #dce8fb;
   line-height: 1.7;
 }
