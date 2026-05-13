@@ -11,10 +11,10 @@ const navLinks = [
 function dbitLogo() {
   return `
     <a href="index.html" class="flex items-center gap-3" aria-label="DBIT Alumni Home">
-      <img src="assets/images/alumni-01.png" alt="Official DBIT Alumni logo" class="h-14 w-auto object-contain shrink-0">
+      <img src="assets/images/alumni-01.png" alt="Official DBIT Alumni logo" class="h-16 w-auto object-contain shrink-0">
       <span class="leading-tight hidden sm:block">
-        <span class="block text-lg font-extrabold text-[#0859a6]">DBIT Alumni</span>
-        <span class="block text-xs font-semibold text-slate-500">Don Bosco Institute of Technology</span>
+        <span class="brand-title block text-2xl">DBIT Alumni Association</span>
+        <span class="brand-subtitle block">Connect. Contribute. Transform.</span>
       </span>
     </a>
   `;
@@ -26,24 +26,34 @@ function injectHeaderFooter() {
   const footer = document.getElementById("site-footer");
   if (header) {
     header.innerHTML = `
-      <div class="bg-[#0859a6] text-white text-sm overflow-hidden">
-        <div class="announcement-track py-2">
-          Autonomous Status 2024 • Established 2001 • 36-acre green campus on Mysore Road, Bengaluru • Highest Package 42 LPA • 650+ offers FY 2025-26 • Alumni across companies, services, entrepreneurship and research
+      <div class="site-top-strip">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+          <div class="flex flex-wrap items-center gap-x-6 gap-y-1">
+            <span>+91 80 2843 1965</span>
+            <a href="mailto:alumni@dbit.co.in">alumni@dbit.co.in</a>
+            <span>Don Bosco Institute of Technology, Kumbalagodu, Bengaluru - 560074</span>
+          </div>
+          <div class="flex items-center gap-3 font-bold">
+            <span>Follow us:</span>
+            <a href="https://www.linkedin.com/school/don-bosco-institute-of-technology-bangalore/" aria-label="DBIT on LinkedIn">in</a>
+            <a href="https://www.instagram.com/dbit_bangalore/" aria-label="DBIT on Instagram">ig</a>
+            <a href="https://www.youtube.com/results?search_query=DBIT+Bangalore" aria-label="DBIT on YouTube">yt</a>
+          </div>
         </div>
       </div>
-      <nav id="navbar" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200 transition-shadow">
+      <nav id="navbar" class="site-nav transition-shadow">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex items-center justify-between h-20">
+          <div class="flex items-center justify-between h-24">
             ${dbitLogo()}
             <div class="hidden lg:flex items-center gap-7">
-              ${navLinks.map(([label, href]) => `<a class="nav-link text-sm font-bold text-slate-700 hover:text-[#429321] ${current === href ? "active" : ""}" href="${href}">${label}</a>`).join("")}
-              <a href="register.html" class="px-5 py-2.5 rounded-full btn-primary font-bold text-sm">Register</a>
-              <a href="login.html" class="px-5 py-2.5 rounded-full border border-[#0859a6] text-[#0859a6] hover:bg-[#429321] hover:text-white font-bold text-sm transition">Login</a>
+              ${navLinks.map(([label, href]) => `<a class="nav-link text-sm font-bold ${current === href ? "active" : ""}" href="${href}">${label}</a>`).join("")}
+              <a href="register.html" class="px-5 py-2.5 rounded-md border border-[#c88918] text-[#9b650e] hover:bg-[#f7bd35] hover:text-[#011d43] font-bold text-sm transition">Register</a>
+              <a href="login.html" class="px-5 py-2.5 rounded-md bg-[#052a5b] text-white hover:bg-[#0859a6] font-bold text-sm transition">Login</a>
             </div>
             <button id="menu-toggle" class="lg:hidden p-2 rounded-lg border border-slate-200" aria-label="Open navigation menu" aria-expanded="false">
-              <span class="block w-6 h-0.5 bg-[#0859a6] mb-1.5"></span>
-              <span class="block w-6 h-0.5 bg-[#0859a6] mb-1.5"></span>
-              <span class="block w-6 h-0.5 bg-[#0859a6]"></span>
+              <span class="block w-6 h-0.5 bg-[#052a5b] mb-1.5"></span>
+              <span class="block w-6 h-0.5 bg-[#052a5b] mb-1.5"></span>
+              <span class="block w-6 h-0.5 bg-[#052a5b]"></span>
             </button>
           </div>
           <div id="mobile-menu" class="hidden lg:hidden pb-5">
@@ -59,12 +69,12 @@ function injectHeaderFooter() {
   }
   if (footer) {
     footer.innerHTML = `
-      <footer class="bg-[#042551] text-white pt-16 pb-8">
+      <footer class="bg-[#011d43] text-white pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="grid md:grid-cols-4 gap-10">
             <div>
               <div class="flex items-center gap-3 mb-4">
-                <div class="bg-white rounded-xl p-2"><img src="assets/images/alumni-01.png" alt="Official DBIT Alumni logo" class="h-12 w-auto object-contain"></div>
+                <div class="bg-white rounded-lg p-2"><img src="assets/images/alumni-01.png" alt="Official DBIT Alumni logo" class="h-12 w-auto object-contain"></div>
                 <div><p class="font-extrabold text-xl">DBIT Alumni</p><p class="text-sm text-blue-100">Bengaluru</p></div>
               </div>
               <p class="text-blue-100 text-sm leading-6">A connected network of Don Bosco Institute of Technology graduates supporting mentorship, careers, entrepreneurship and lifelong bonds.</p>
@@ -87,16 +97,16 @@ function injectHeaderFooter() {
                 <a href="https://www.linkedin.com/school/don-bosco-institute-of-technology-bangalore/" class="w-10 h-10 rounded-full bg-white/10 grid place-items-center hover:bg-[#429321] hover:text-white" aria-label="LinkedIn">in</a>
                 <a href="https://www.youtube.com/results?search_query=DBIT+Bangalore" class="w-10 h-10 rounded-full bg-white/10 grid place-items-center hover:bg-[#429321] hover:text-white" aria-label="YouTube">▶</a>
               </div>
-              <a href="register.html" class="inline-block mt-6 px-5 py-3 rounded-full bg-[#f7c04d] text-[#042551] font-extrabold">Join the Network</a>
+              <a href="register.html" class="inline-block mt-6 px-5 py-3 rounded-md bg-[#f7bd35] text-[#011d43] font-extrabold">Join the Network</a>
             </div>
           </div>
           <div class="border-t border-white/10 mt-10 pt-6 text-sm text-blue-100 flex flex-col md:flex-row justify-between gap-3">
-            <p>© 2026 DBIT Alumni Association. Static alumni portal concept.</p>
+            <p>© 2026 DBIT Alumni Association. Version 2 prototype.</p>
             <p>VTU Affiliated • Autonomous 2024 • Established 2001</p>
           </div>
         </div>
       </footer>
-      <button id="back-to-top" class="fixed right-5 bottom-5 w-12 h-12 rounded-full bg-[#0859a6] text-white shadow-xl hidden" aria-label="Back to top">↑</button>
+      <button id="back-to-top" class="fixed right-5 bottom-5 w-12 h-12 rounded-full bg-[#052a5b] text-white shadow-xl hidden" aria-label="Back to top">↑</button>
     `;
   }
 }
