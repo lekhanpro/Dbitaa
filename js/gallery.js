@@ -13,6 +13,31 @@ const galleryItems = [
   ["DBITAA Archive Photo", "2021", "photos", "assets/images/alumni-15.jpeg"]
 ];
 
+const sourceAlbumItems = [
+  ["Distinction Award Ceremony 2025 - AI & DS", "2025", "photos", "assets/images/source/source-053.jpeg"],
+  ["Distinction Award Ceremony 2025 - AI & ML", "2025", "photos", "assets/images/source/source-054.jpeg"],
+  ["Distinction Award Ceremony 2025 - Civil & Mechanical", "2025", "photos", "assets/images/source/source-055.jpeg"],
+  ["Distinction Award Ceremony 2025 - ECE", "2025", "photos", "assets/images/source/source-056.jpeg"],
+  ["Distinction Award Ceremony 2025 - CSE", "2025", "photos", "assets/images/source/source-057.jpeg"],
+  ["Distinction Award Ceremony 2025 - ISE", "2025", "photos", "assets/images/source/source-058.jpeg"],
+  ["Graduands Day Ceremony 2025", "2025", "photos", "assets/images/source/source-059.jpeg"],
+  ["Graduands Day Ceremony 2025 - ME", "2025", "photos", "assets/images/source/source-060.jpeg"],
+  ["Graduands Day Ceremony 2025 - EEE", "2025", "photos", "assets/images/source/source-061.jpeg"],
+  ["Graduands Day Ceremony 2025 - ECE", "2025", "photos", "assets/images/source/source-062.jpeg"],
+  ["Milan Alumni Meet 2024", "2024", "photos", "assets/images/source/source-007.jpeg"],
+  ["Alumni Cricket Tournament 2023", "2023", "photos", "assets/images/source/source-008.png"],
+  ["Milan 2022 Memories", "2022", "photos", "assets/images/source/source-009.jpeg"],
+  ["DBIT Cricket Ground", "2023", "photos", "assets/images/source/source-052.jpg"],
+  ["Times Business Awards 2021 Bengaluru", "2021", "photos", "assets/images/source/source-024.jpeg"],
+  ["Kannadotsava 2021", "2021", "photos", "assets/images/source/source-010.jpeg"],
+  ["AinoTech Alumni Venture", "2006", "photos", "assets/images/source/source-035.png"],
+  ["Pentagon Space Alumni Venture", "2006", "photos", "assets/images/source/source-038.png"],
+  ["Maxlite AAC Blocks Alumni Venture", "2014", "photos", "assets/images/source/source-039.png"],
+  ["Adversity Solutions Young Achiever", "2020", "photos", "assets/images/source/source-041.png"]
+];
+
+galleryItems.push(...sourceAlbumItems);
+
 const videos = [
   ["DBIT Homepage Film", "Main DBIT website video", "0BlhrLlBEck"],
   ["DBIT Alumni Cricket Tournament 2023 Promo", "Alumni sports and community", "2e-Bke59feo"],
